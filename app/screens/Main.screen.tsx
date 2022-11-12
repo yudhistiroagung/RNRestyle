@@ -24,6 +24,7 @@ const Main = () => {
           <Text mr="xs">Dark</Text>
         </Box>
         <Text variant="heading">Restyle</Text>
+        <Box height={8} />
         <Text variant="subHeading">
           This project is playground for using and explore restyle library for
           theming
