@@ -6,6 +6,8 @@ import { activeTheme } from '../states';
 import Box from '../atoms/Box';
 import SafeAreaView from '../atoms/SafeAreaView';
 import Text from '../atoms/Text';
+import Card from '../atoms/Card';
+import Button from '../atoms/Button';
 
 const Main = () => {
   const [theme, setTheme] = useAtom(activeTheme);
@@ -21,7 +23,7 @@ const Main = () => {
       <Box padding="m" flex={1} flexDirection="column">
         <Box flexDirection="row-reverse" alignItems="center">
           <Switch value={isDark} onChange={onToggle} />
-          <Text mr="xs">Dark</Text>
+          <Text mr="sm">Dark</Text>
         </Box>
         <Text variant="heading">Restyle</Text>
         <Box height={8} />
@@ -29,6 +31,18 @@ const Main = () => {
           This project is playground for using and explore restyle library for
           theming
         </Text>
+        <Box height={8} />
+        <Button label="DEFAULT BTN" />
+        <Box height={8} />
+        <Button variant="primary" label="PRIMARY BTN" />
+        <Box height={8} />
+        <Button variant="warning" label="WARNING BTN" />
+        <Box height={8} />
+        <Button variant="danger" label="DANGER BTN" />
+        <Box height={8} />
+        <Card variant="primary">
+          <Text>INSIDE CARD</Text>
+        </Card>
       </Box>
     </SafeAreaView>
   );

@@ -23,6 +23,9 @@ const theme = createTheme({
     $secondary: colors.roseDust,
     $accent: colors.greenYellowCrayola,
 
+    $warning: colors.melon,
+    $danger: colors.russianViolet,
+
     $black: colors.black,
     $white: colors.white,
 

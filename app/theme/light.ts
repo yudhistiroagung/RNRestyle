@@ -18,6 +18,8 @@ const theme = createTheme({
     $primary: colors.darkSpringGreen,
     $secondary: colors.middleGreen,
     $accent: colors.melon,
+    $warning: colors.melon,
+    $danger: colors.persianOrange,
 
     $black: colors.black,
     $white: colors.white,
@@ -54,6 +56,50 @@ const theme = createTheme({
     subHeading: {
       color: '$gray',
       fontSize: 14,
+    },
+  },
+  buttonVariants: {
+    defaults: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      borderWidth: 1,
+      borderColor: '$foreground',
+      alignItems: 'center',
+    },
+    primary: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      backgroundColor: '$primary',
+      alignItems: 'center',
+      borderWidth: undefined,
+    },
+    warning: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      backgroundColor: '$warning',
+      alignItems: 'center',
+      borderWidth: undefined,
+    },
+    danger: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      backgroundColor: '$danger',
+      alignItems: 'center',
+      borderWidth: undefined,
+    },
+  },
+  cardVariants: {
+    defaults: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      backgroundColor: '$background',
+      elevation: 4,
+    },
+    primary: {
+      borderRadius: 'sm',
+      padding: 'sm',
+      backgroundColor: '$primary',
+      elevation: 4,
     },
   },
   breakpoints: {},
