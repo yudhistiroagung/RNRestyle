@@ -6,6 +6,8 @@ const colors = {
   lightYellow: '#FEFEE3',
   melon: '#FFC9B9',
   persianOrange: '#D68C45',
+  redOrange: '#FF3F00',
+  jonquil: '#F7CB15',
 
   black: '#333333',
   white: '#fff',
@@ -18,15 +20,15 @@ const theme = createTheme({
     $primary: colors.darkSpringGreen,
     $secondary: colors.middleGreen,
     $accent: colors.melon,
-    $warning: colors.melon,
-    $danger: colors.persianOrange,
+
+    $warning: colors.jonquil,
+    $danger: colors.redOrange,
 
     $black: colors.black,
     $white: colors.white,
     $gray: colors.gray,
 
     $background: colors.white,
-
     $foreground: colors.black,
   },
   spacing: {
@@ -34,14 +36,14 @@ const theme = createTheme({
     sm: 8,
     m: 16,
     l: 24,
-    xl: 24,
+    xl: 32,
   },
   borderRadii: {
     xs: 4,
     sm: 8,
     m: 16,
     l: 24,
-    xl: 24,
+    xl: 32,
   },
   textVariants: {
     defaults: {
@@ -50,12 +52,35 @@ const theme = createTheme({
     },
     heading: {
       color: '$foreground',
-      fontSize: 16,
+      fontSize: 20,
       fontWeight: 'bold',
     },
     subHeading: {
       color: '$gray',
+      fontSize: 16,
+    },
+    title: {
+      color: '$foreground',
+      fontSize: 16,
+      fontWeight: 'bold',
+    },
+    subTitle: {
+      color: '$gray',
       fontSize: 14,
+    },
+
+    // button label text varianst
+    button_defaults: {
+      color: '$foreground',
+    },
+    button_primary: {
+      color: '$white',
+    },
+    button_warning: {
+      color: '$white',
+    },
+    button_danger: {
+      color: '$white',
     },
   },
   buttonVariants: {
@@ -99,7 +124,7 @@ const theme = createTheme({
       borderRadius: 'sm',
       padding: 'sm',
       backgroundColor: '$primary',
-      elevation: 4,
+      elevation: 6,
     },
   },
   breakpoints: {},

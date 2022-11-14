@@ -25,12 +25,15 @@ const Main = () => {
           <Switch value={isDark} onChange={onToggle} />
           <Text mr="sm">Dark</Text>
         </Box>
-        <Text variant="heading">Restyle</Text>
-        <Box height={8} />
+        <Text variant="heading">Heading</Text>
         <Text variant="subHeading">
           This project is playground for using and explore restyle library for
           theming
         </Text>
+        <Text variant="title">Title</Text>
+        <Text variant="subTitle">Sub Title</Text>
+        <Box height={8} />
+        <Text variant="heading">Buttons</Text>
         <Box height={8} />
         <Button label="DEFAULT BTN" />
         <Box height={8} />
@@ -39,6 +42,8 @@ const Main = () => {
         <Button variant="warning" label="WARNING BTN" />
         <Box height={8} />
         <Button variant="danger" label="DANGER BTN" />
+        <Box height={8} />
+        <Text variant="heading">CARD</Text>
         <Box height={8} />
         <Card variant="primary">
           <Text>INSIDE CARD</Text>

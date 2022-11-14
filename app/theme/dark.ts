@@ -7,6 +7,8 @@ const colors = {
   greenYellowCrayola: '#F0F2A6',
   melon: '#F0F2A6',
   russianViolet: '#392061',
+  redOrange: '#FF3F00',
+  jonquil: '#F7CB15',
 
   black: '#333333',
   white: '#fff',
@@ -23,8 +25,8 @@ const theme = createTheme({
     $secondary: colors.roseDust,
     $accent: colors.greenYellowCrayola,
 
-    $warning: colors.melon,
-    $danger: colors.russianViolet,
+    $warning: colors.jonquil,
+    $danger: colors.redOrange,
 
     $black: colors.black,
     $white: colors.white,

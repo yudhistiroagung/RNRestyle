@@ -15,23 +15,33 @@ type ButtonContainerProps = SpacingProps<Theme> &
   VariantProps<Theme, 'buttonVariants'> &
   ComponentProps<typeof View>;
 
-const cardVariant = createVariant<Theme>({ themeKey: 'buttonVariants' });
+const buttonVariant = createVariant<Theme>({ themeKey: 'buttonVariants' });
 
 const ButtonContainer = createRestyleComponent<ButtonContainerProps, Theme>(
-  [spacing, cardVariant as any],
+  [spacing, buttonVariant as any],
   View,
 );
 
 export type ButtonProps = ButtonContainerProps & {
   label: string;
   onPress?: () => void;
+  disabled?: boolean;
 };
 
-const Button = ({ label, onPress, ...rest }: ButtonProps) => {
+const Button = ({
+  label,
+  onPress,
+  disabled,
+  variant,
+  ...rest
+}: ButtonProps) => {
+  const textVariant =
+    variant &&
+    (`button_${variant}` as keyof Omit<Theme['textVariants'], 'defaults'>);
   return (
-    <TouchableOpacity onPress={onPress}>
-      <ButtonContainer {...rest}>
-        <Text>{label}</Text>
+    <TouchableOpacity onPress={onPress} disabled={disabled}>
+      <ButtonContainer variant={variant} {...rest}>
+        <Text variant={textVariant}>{label}</Text>
       </ButtonContainer>
     </TouchableOpacity>
   );
